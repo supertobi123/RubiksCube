@@ -1,0 +1,10 @@
+﻿RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glewInit@0" in Funktion ""struct GLFWwindow * __cdecl InitializeSystem(void)" (?InitializeSystem@@YAPAUGLFWwindow@@XZ)".
+RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glfwInit" in Funktion ""struct GLFWwindow * __cdecl InitializeSystem(void)" (?InitializeSystem@@YAPAUGLFWwindow@@XZ)".
+RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glfwTerminate" in Funktion ""void __cdecl ShutdownSystem(void)" (?ShutdownSystem@@YAXXZ)".
+RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glfwWindowHint" in Funktion ""struct GLFWwindow * __cdecl InitializeSystem(void)" (?InitializeSystem@@YAPAUGLFWwindow@@XZ)".
+RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glfwCreateWindow" in Funktion ""struct GLFWwindow * __cdecl InitializeSystem(void)" (?InitializeSystem@@YAPAUGLFWwindow@@XZ)".
+RubiksCube.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "_glfwMakeContextCurrent" in Funktion ""struct GLFWwindow * __cdecl InitializeSystem(void)" (?InitializeSystem@@YAPAUGLFWwindow@@XZ)".
+RubiksCube.obj : error LNK2001: Nicht aufgelöstes externes Symbol "_glewExperimental".
+C:\Users\tobya\Documents\Konsolenprogrammierung\RubiksCube\\..\ExternalResources\glfw\lib-vc2017\glfw3.lib : warning LNK4272: Bibliothekcomputertyp "x64" steht in Konflikt mit dem Zielcomputertyp "x86"
+C:\Users\tobya\Documents\Konsolenprogrammierung\RubiksCube\\..\ExternalResources\glew\lib\Release\x64\glew32s.lib : warning LNK4272: Bibliothekcomputertyp "x64" steht in Konflikt mit dem Zielcomputertyp "x86"
+C:\Users\tobya\Documents\Konsolenprogrammierung\RubiksCube\Debug\RubiksCube.exe : fatal error LNK1120: 7 nicht aufgelöste Externe
