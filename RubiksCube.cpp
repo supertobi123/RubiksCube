@@ -6,8 +6,18 @@
 #include <GLFW/glfw3.h>
 
 
-GameInterface gDummyTest;
+#include "TestGlm.h"
+#include "TestTriangle.h"
+#include "TestCubie.h"
+#include "CompoundCube.h"
 
+#include <iostream>
+
+GameInterface gDummyTest;
+TestGlm gTestGlm;
+TestTriangle gTestTriangle;
+TestCubie gTestCubie;
+CompoundCube gCompoundCube;
 
 GameInterface* gUsedInterface;
 
@@ -37,6 +47,7 @@ void RunCoreloop(GLFWwindow* window) {
 
 		glfwPollEvents();
 		gUsedInterface->Update(timeDifference);
+		
 
 		int screenWidth, screenHeight;
 		glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
@@ -45,7 +56,7 @@ void RunCoreloop(GLFWwindow* window) {
 
 		glEnable(GL_DEPTH_TEST);
 		glDepthFunc(GL_LEQUAL);
-		glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		gUsedInterface->Render(aspectRatio);
@@ -65,9 +76,14 @@ void ShutdownSystem() {
 
 int main()
 {
-	gUsedInterface = &gDummyTest;
+	//gUsedInterface = &gDummyTest;
+	//gUsedInterface = &gTestGlm;
+	//gUsedInterface = &gTestTriangle;
+	//gUsedInterface = &gTestCubie;
+	gUsedInterface = &gCompoundCube;
 	GLFWwindow* window = InitializeSystem();
 	RunCoreloop(window);
 	ShutdownSystem();
 }
 
+ 

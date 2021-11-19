@@ -109,7 +109,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../ExternalResources/stb;$(SolutionDir)/../ExternalResources/glm/glm;$(SolutionDir)/../ExternalResources/glew/include;$(SolutionDir)/../ExternalResources/glfw/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../ExternalResources/stb;$(SolutionDir)/../ExternalResources/glm;$(SolutionDir)/../ExternalResources/glew/include;$(SolutionDir)/../ExternalResources/glfw/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../ExternalResources/stb;$(SolutionDir)/../ExternalResources/glm/glm;$(SolutionDir)/../ExternalResources/glew/include;$(SolutionDir)/../ExternalResources/glfw/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../ExternalResources/stb;$(SolutionDir)/../ExternalResources/glm;$(SolutionDir)/../ExternalResources/glew/include;$(SolutionDir)/../ExternalResources/glfw/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -163,11 +163,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CompoundCube.cpp" />
+    <ClCompile Include="CubieRenderer.cpp" />
     <ClCompile Include="GameInterface.cpp" />
     <ClCompile Include="RubiksCube.cpp" />
+    <ClCompile Include="ShaderUtil.cpp" />
+    <ClCompile Include="TestCubie.cpp" />
+    <ClCompile Include="TestGlm.cpp" />
+    <ClCompile Include="TestTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CompoundCube.h" />
+    <ClInclude Include="CubieRenderer.h" />
     <ClInclude Include="GameInterface.h" />
+    <ClInclude Include="ShaderUtil.h" />
+    <ClInclude Include="TestCubie.h" />
+    <ClInclude Include="TestGlm.h" />
+    <ClInclude Include="TestTriangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="FragmentShaderSimple.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="VertexShaderSimple.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="FragmentColor.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="VertexColor.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </CopyFileToFolders>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
